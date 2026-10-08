@@ -302,3 +302,4 @@ class FAQChatbot:
             {"category": faq["category"], "question": faq["question"]}
             for faq in self.raw_faqs
         ]
+
