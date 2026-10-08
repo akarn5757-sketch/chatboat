@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaBot — FAQ Chatbot | CodeAlpha AI Task 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar FAQ Directory (Desktop / Drawer) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-brain"></i>
+          <span>Knowledge Base</span>
+        </div>
+        <button class="close-sidebar-btn" id="closeSidebarBtn" aria-label="Close sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-content">
+        <p class="sidebar-hint">Click any FAQ below to test the NLP matcher:</p>
+        <div class="faq-list">
+          {% for item in faqs %}
+          <div class="faq-list-item" onclick="sendQuickPrompt('{{ item.question | replace("'", "\\'") }}')">
+            <span class="faq-cat">{{ item.category }}</span>
+            <span class="faq-q">{{ item.question }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="tech-badge">
+          <i class="fa-solid fa-microchip"></i>
+          <span>NLTK + TF-IDF + Cosine Sim</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-container">
+      <!-- Chat Header -->
+      <header class="chat-header">
+        <div class="header-left">
+          <button class="toggle-sidebar-btn" id="openSidebarBtn" title="View FAQs">
+            <i class="fa-solid fa-book-open"></i>
+            <span class="btn-label">Browse FAQs</span>
+          </button>
+          <div class="bot-profile">
+            <div class="bot-avatar">
+              <i class="fa-solid fa-robot"></i>
+              <span class="online-indicator"></span>
+            </div>
+            <div class="bot-info">
+              <h1>AlphaBot</h1>
+              <p class="status">AI FAQ Support Assistant &bull; Online</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="action-btn" id="clearChatBtn" title="Clear Conversation">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span>Reset</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Chat Messages Scroll Area -->
+      <section class="messages-area" id="messagesArea">
+        <!-- Welcome Message -->
+        <div class="message bot-message">
+          <div class="avatar-sm">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="message-content">
+            <div class="bubble">
+              <p>Hello! 👋 I am your intelligent <strong>FAQ Support Assistant</strong>. I can answer questions about orders, shipping, payment security, returns, and warranties.</p>
+              <p>How can I help you today?</p>
+            </div>
+            
+            <div class="quick-prompts-wrapper">
+              <span class="prompt-title">Try asking:</span>
+              <div class="quick-prompts">
+                {% for q in sample_questions %}
+                <button class="prompt-chip" onclick="sendQuickPrompt('{{ q | replace("'", "\\'") }}')">
+                  {{ q }}
+                </button>
+                {% endfor %}
+              </div>
+            </div>
+            <span class="message-time" id="initTime">Just now</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="avatar-sm">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="typing-bubble">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <footer class="chat-input-area">
+        <form id="chatForm" class="chat-form" onsubmit="handleUserSubmit(event)">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="userInput" 
+              placeholder="Ask a question (e.g. How do I track my order?)" 
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="sendBtn" class="send-btn" aria-label="Send message">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+        <div class="input-footer-note">
+          <span>Powered by CodeAlpha AI Internship Task 2 &bull; Preprocessing via NLTK & Cosine Similarity</span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

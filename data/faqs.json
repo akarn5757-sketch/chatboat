@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "category": "Ordering",
+    "question": "How can I place an order?",
+    "patterns": [
+      "How do I buy a product?",
+      "Steps to place an order",
+      "How to purchase items online?",
+      "Can you guide me on placing an order?"
+    ],
+    "answer": "To place an order: 1) Browse our catalog and select your desired items. 2) Click 'Add to Cart'. 3) Proceed to checkout, enter your shipping and billing details, and confirm payment. You will receive an email confirmation once completed."
+  },
+  {
+    "id": 2,
+    "category": "Shipping & Tracking",
+    "question": "How do I track my order?",
+    "patterns": [
+      "Where is my order?",
+      "Track shipment status",
+      "How can I check the delivery status of my package?",
+      "Where can I find my tracking number?"
+    ],
+    "answer": "Once your order ships, we send a tracking number via email and SMS. You can also track your shipment directly in the 'My Orders' section of your account or enter your tracking ID on our tracking portal."
+  },
+  {
+    "id": 3,
+    "category": "Shipping & Delivery",
+    "question": "How long does shipping take and what are the delivery charges?",
+    "patterns": [
+      "What are the delivery times?",
+      "How fast is shipping?",
+      "Is delivery free?",
+      "Standard delivery duration and shipping fees"
+    ],
+    "answer": "Standard shipping takes 3 to 5 business days, and express delivery takes 1 to 2 business days. Standard shipping is free on orders above $50; otherwise, a flat fee of $4.99 applies."
+  },
+  {
+    "id": 4,
+    "category": "Shipping & Delivery",
+    "question": "Do you offer international shipping?",
+    "patterns": [
+      "Can you ship overseas?",
+      "Do you deliver worldwide?",
+      "Is international delivery supported?",
+      "Shipping to other countries"
+    ],
+    "answer": "Yes, we ship to over 50 countries worldwide. International shipping typically takes 7 to 14 business days, and customs/duties are calculated at checkout."
+  },
+  {
+    "id": 5,
+    "category": "Returns & Refunds",
+    "question": "What is your return policy?",
+    "patterns": [
+      "How can I return an item?",
+      "Can I return a purchased product?",
+      "Return window and conditions",
+      "How many days do I have to return an item?"
+    ],
+    "answer": "We offer a 30-day hassle-free return policy. Items must be in their original packaging, unused, and accompanied by the receipt or proof of purchase."
+  },
+  {
+    "id": 6,
+    "category": "Returns & Refunds",
+    "question": "How and when will I receive my refund?",
+    "patterns": [
+      "When do I get my money back?",
+      "Refund processing time",
+      "How long does a refund take to process?",
+      "Where is my refund sent?"
+    ],
+    "answer": "Once we inspect your returned item, we process your refund within 3 to 5 business days. The funds will be credited back to your original payment method."
+  },
+  {
+    "id": 7,
+    "category": "Payments",
+    "question": "What payment methods do you accept?",
+    "patterns": [
+      "Can I pay with credit card or PayPal?",
+      "Which payment options are available?",
+      "Do you take Apple Pay or Google Pay?",
+      "Accepted payment modes"
+    ],
+    "answer": "We accept major credit and debit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and Cash on Delivery (select locations)."
+  },
+  {
+    "id": 8,
+    "category": "Payments & Security",
+    "question": "Is it safe to use my credit card on your website?",
+    "patterns": [
+      "Are payments secure?",
+      "Is my payment information safe?",
+      "Do you protect credit card data?",
+      "Payment gateway security"
+    ],
+    "answer": "Yes, absolutely. All transactions are encrypted using 256-bit SSL encryption and processed through PCI-DSS compliant payment gateways. We never store your full card details."
+  },
+  {
+    "id": 9,
+    "category": "Account Management",
+    "question": "How do I reset my password?",
+    "patterns": [
+      "Forgot my password",
+      "I cannot login to my account",
+      "How to recover account password?",
+      "Reset user credentials"
+    ],
+    "answer": "Click 'Sign In' at the top right, select 'Forgot Password', and enter your registered email address. We will send you a secure link to reset your password within minutes."
+  },
+  {
+    "id": 10,
+    "category": "Account Management",
+    "question": "How can I change my account details or shipping address?",
+    "patterns": [
+      "Update profile information",
+      "Change delivery address",
+      "Modify account settings",
+      "Edit email or phone number in account"
+    ],
+    "answer": "Log in to your account, navigate to 'Account Settings' > 'Addresses' or 'Profile', update your information, and click 'Save Changes'."
+  },
+  {
+    "id": 11,
+    "category": "Discounts & Offers",
+    "question": "How do I apply a discount code or coupon?",
+    "patterns": [
+      "Where do I enter promo code?",
+      "How to use vouchers?",
+      "Apply promotional coupon at checkout",
+      "Redeem gift coupon"
+    ],
+    "answer": "During checkout, locate the 'Promo Code / Gift Voucher' box in your order summary, paste your code, and click 'Apply'. The discount will immediately reflect in your total."
+  },
+  {
+    "id": 12,
+    "category": "Order Modification",
+    "question": "Can I cancel or modify my order after placing it?",
+    "patterns": [
+      "How do I cancel an order?",
+      "Change items in order after checkout",
+      "Can I cancel before dispatch?",
+      "Stop order processing"
+    ],
+    "answer": "You can cancel or modify your order within 1 hour of placing it by visiting 'My Orders' and selecting 'Cancel Order'. After 1 hour, processing begins and the order cannot be canceled, but you can initiate a return upon arrival."
+  },
+  {
+    "id": 13,
+    "category": "Warranty & Support",
+    "question": "Do products come with a warranty?",
+    "patterns": [
+      "What is the warranty period?",
+      "Is manufacturer warranty included?",
+      "How do I claim warranty on damaged products?",
+      "Product guarantee policy"
+    ],
+    "answer": "All electronic products come with a minimum 1-year manufacturer warranty. You can claim warranty service by contacting support with your invoice and serial number."
+  },
+  {
+    "id": 14,
+    "category": "Customer Support",
+    "question": "How can I contact customer support?",
+    "patterns": [
+      "How do I talk to a human agent?",
+      "Customer care contact number",
+      "Support email address and working hours",
+      "Help desk assistance"
+    ],
+    "answer": "You can reach our support team 24/7 via email at support@example.com, live chat on our website, or call our toll-free helpline at 1-800-555-0199 (Mon-Sat, 9 AM - 8 PM EST)."
+  },
+  {
+    "id": 15,
+    "category": "Products & Stock",
+    "question": "What if an item is out of stock?",
+    "patterns": [
+      "When will out of stock products be available?",
+      "Notify me when back in stock",
+      "Restock schedule for items",
+      "Can I pre-order out of stock items?"
+    ],
+    "answer": "If an item is out of stock, click 'Notify Me' on the product page and enter your email. We will notify you immediately once the item is replenished."
+  }
+]
